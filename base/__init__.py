@@ -509,5 +509,15 @@ msg = ["ale urocze",
 "jebane fanboie",
 "W kolejke sie ustawić xdd",
 "Tak se to tłumaczą xdd",
-"nie da sie"]
+"nie da sie",
+"nic d o kolejki nie wrzucach",
+"na start nie wrzucasz bezmuzgu",
+"debil",
+"no właśnie",
+"debil",
+"kura debil",
+"defil",
+"debil",
+"spierdalaj krzywy kutafonie",
+"krzywe chuje jebane"]
 text="dzień dobry w tym króciutkim filmiku chciałbym pokazać doświadczenie fizyczne naturalne ogniwa, które możemy łatfiutko wykonać w naszym domu. Do wykonania takiego eksperymentu będzie nam potrzebne: multimetr, dwie elektrody - w moim przypadku jest to elektroda miedziana oraz elektroda stalowa oraz ogórek kiszony i cytryna, można też wykorzystać banan lub kapustę kiszoną. Dla porównania wziąłem jeszcze małą baterię kategorii AAA. A więc, do przeprowadzenia takiego eksperymentu potrzebujemy włączyć nasz multimetr na prąd stały, umieścić dwie elektrody w naszym warzywie lub owocu i jak widzimy pojawiła się wartość na multimetrze, jest to wartość napięcia stałego, które generuje ten właśnie owoc, w naszym przypadku cytryna. Teraz dla porównania zrobimy to samo z ogórkiem kiszonym umieszczamy przy jednym końcu elektrodę ujemną, do tego elektrodę z drugiej strony - dodatnią i również jak widzimy pojawia się napięcie stałe. Szybka anegdota, dzieje się to dlatego, że nasz ogórek i cytryna są elektrolitami, więc zawierają jony dodatnie i ujemne. Po wsadzeniu w nie elektrod wykonanych z dwóch różnych metali pojawia się różnica potencjałów, czyli napięcie elektryczne. Powstaje wówczas naturalne ogniwo, lecz niestety jest ono nietrwałe, ponieważ jony bardzo szybko się wyczerpują. Dla porównania możemy spróbować z baterią, jest to zwykła bateria półtora woltowa, więc tak: plus do plusa - chwileczkę może to zrobię tak, będzie łatwiej - i jak widzimy wartość z naszych warzyw lub owoców nie jest wcale taka zła. Także to by było na tyle w tym fikmiku, dziękuję bardzo za uwagę i mam nadzieję, że czegoś się dowiedzieliście, pozdrawiam, cześć."
