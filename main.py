@@ -15,4 +15,7 @@ async def on_message(message):
       
    if message.content.startswith('$text'):
       await message.channel.send(text)
+   
+   if message.content.startswith('$kurwin'):
+      await message.channel.send(kurwin)
 client.run(token)
