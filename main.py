@@ -8,7 +8,7 @@ token = os.getenv("DISCORD_TOKEN")
 async def on_ready():
    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="hentai"))
 
-   @client.event
+@client.event
 async def on_message(message):
    if message.content.startswith('adam'):
       await message.channel.send(msg[random.randint(0,len(msg)-1)])
