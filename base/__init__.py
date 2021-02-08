@@ -1070,3 +1070,5 @@ text="dzień dobry w tym króciutkim filmiku chciałbym pokazać doświadczenie 
 kurwin="Witam, wszystkich. Ja dziś w drodze jestem, więc niestety nie mogę dziś być. Życzę wam wszystkim wesołych świąt i mam nadzieję, do zobaczenia w nowym roku."
 dzierg="Witajcie:wave:, nie:x: mogę:pensive: rozpocząć:arrow_forward: spotkania:family_mmbb:. Pojawił:fast_forward: się:point_left: jakiś:face_with_monocle: problem:pleading_face:. Cierpliwości:timer:."
 dzierg2="Dajcie:gift: mi:point_left: chwilkę:timer:, nie:x: chce:pensive: zaskoczyć:person_playing_handball: mi:point_left: spotkanie:family_mmbb:"
+alek1="https://www.youtube.com/channel/UCZmzpnJdYlMlZBHJRtXb-Ag"
+alek2="dajcie suba pls <:dzierg:777876157169270786>"
