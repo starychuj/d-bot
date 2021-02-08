@@ -24,5 +24,9 @@ async def on_message(message):
    
    elif message.content.startswith('$dzierg'):
       await message.channel.send(dzierg)
-   
+      
+   elif message.content.startswith('alek'):
+      await message.channel.send(alek1)
+      await message.channel.send(alek2)
+      
 client.run(token)
