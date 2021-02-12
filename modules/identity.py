@@ -19,7 +19,3 @@ zawo = {
     "name":"zawodev",
     "photo_url":"https://cdn.discordapp.com/avatars/336921078138011650/6bac60336e9569abe2e648c3194cf1d1.png?size=256"
 }
-tocha = {
-    "name":"nicnicjajo",
-    "photo_url":"https://cdn.discordapp.com/avatars/420927722798448681/3ee801a05ea8cc5c29a5b0982af6a3de.png?size=256"
-}

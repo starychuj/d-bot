@@ -44,10 +44,6 @@ async def on_message(ctx):
         await sendWebhookMessage(ctx,spike,getRandomMessage(sMessage,createSession()))
     elif ctx.content.startswith('adam'):
        await sendWebhookMessage(ctx,icebox,getRandomMessage(aMessage,createSession()))
-    elif ctx.content.startswith('zawo'):
-       await sendWebhookMessage(ctx,zawo,getRandomMessage(zMessage,createSession()))
-    elif ctx.content.startswith('tocha'):
-       await sendWebhookMessage(ctx,tocha,getRandomMessage(tMessage,createSession()))
     elif ctx.content.startswith('alek'):
        await sendWebhookMessage(ctx,zawo,alek1)
        await sendWebhookMessage(ctx,zawo,alek2)
