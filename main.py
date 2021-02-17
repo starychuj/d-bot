@@ -43,6 +43,7 @@ async def on_ready():
 
 @bot.event
 async def on_message(ctx):
+    ctx.content = ctx.content.lower()
     if ctx.content.startswith('kamil'):
         await sendWebhookMessage(ctx,spike,getRandomMessage(sMessage,createSession()))
     elif ctx.content.startswith('adam'):
