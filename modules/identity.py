@@ -23,3 +23,7 @@ tocha = {
     "name":"nicnicjajo",
     "photo_url":"https://cdn.discordapp.com/avatars/420927722798448681/3ee801a05ea8cc5c29a5b0982af6a3de.png?size=256"
 }
+borno = {
+    "name":"Tshock",
+    "photo_url":"https://cdn.discordapp.com/attachments/774178902901522453/811552399739060245/unknown.png"
+}

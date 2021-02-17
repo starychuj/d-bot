@@ -17,6 +17,9 @@ async def sendWebhookMessage(ctx,identity,message):
         if selectedWebhook == None:
             selectedWebhook = await ctx.channel.create_webhook(name=webhookName)
         await selectedWebhook.send(message,username=identity["name"],avatar_url=identity["photo_url"])
+async def alekMsg(ctx):
+    await sendWebhookMessage(ctx,zawo,alek1)
+    await sendWebhookMessage(ctx,zawo,alek2)
 @bot.command()
 async def dzierg(ctx):
     await sendWebhookMessage(ctx,dziergID,dziergText)
@@ -48,8 +51,9 @@ async def on_message(ctx):
        await sendWebhookMessage(ctx,zawo,getRandomMessage(zMessage,createSession()))
     elif ctx.content.startswith('tocha'):
        await sendWebhookMessage(ctx,tocha,getRandomMessage(tMessage,createSession()))
+    elif ctx.content.startswith('borno'):
+       await sendWebhookMessage(ctx,borno,getRandomMessage(bMessage,createSession()))
     elif ctx.content.startswith('alek'):
-       await sendWebhookMessage(ctx,zawo,alek1)
-       await sendWebhookMessage(ctx,zawo,alek2)
+        await alekMsg(ctx)
     await bot.process_commands(ctx)
 bot.run(token)
