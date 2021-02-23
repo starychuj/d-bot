@@ -3,7 +3,6 @@ from modules.identity import *
 from modules.messages import *
 import os
 import discord
-import regex
 from discord.ext import commands
 webhookName = "icebox246"
 bot = commands.Bot(command_prefix='$')
