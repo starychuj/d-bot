@@ -17,6 +17,11 @@ async def sendWebhookMessage(ctx,identity,message):
         if selectedWebhook == None:
             selectedWebhook = await ctx.channel.create_webhook(name=webhookName)
         await selectedWebhook.send(message,username=identity["name"],avatar_url=identity["photo_url"])
+def replaceAll(msg):
+    toReplace = ["borno ","powiedz ","powiedzborno","bornopowiedz","BORNO ","POWIEDZ ","BORNOPOWIEDZ","POWIEDZBORNO"]
+    for w in toReplace:
+        msg = msg.replace(w,"")
+    return msg
 async def alekMsg(ctx):
     await sendWebhookMessage(ctx,zawo,alek1)
     await sendWebhookMessage(ctx,zawo,alek2)
@@ -43,24 +48,24 @@ async def on_ready():
 
 @bot.event
 async def on_message(ctx):
-    ctx.content = ctx.content.lower()
-    if ctx.content.startswith('kamil'):
+    messageContent = ctx.content.lower()
+    if messageContent.startswith('kamil'):
         await sendWebhookMessage(ctx,spike,getRandomMessage(sMessage))
-    elif ctx.content.startswith('adam'):
+    elif messageContent.startswith('adam'):
        await sendWebhookMessage(ctx,icebox,getRandomMessage(aMessage))
-    elif ctx.content.startswith('zawo'):
+    elif messageContent.startswith('zawo'):
        await sendWebhookMessage(ctx,zawo,getRandomMessage(zMessage))
-    elif ctx.content.startswith('tocha'):
+    elif messageContent.startswith('tocha'):
        await sendWebhookMessage(ctx,tocha,getRandomMessage(tMessage))
-    elif ctx.content.startswith('borno'):
+    elif messageContent.startswith('borno'):
        if "powiedz" in ctx.content:
-            msg = ctx.content.replace('borno ','')
-            msg = msg.replace('powiedz ','')
-            msg = msg.replace('powiedzborno ','')
+            msg = replaceAll(ctx.content)
+            if msg == "":
+                msg = "nie"
             await sendWebhookMessage(ctx,borno,msg)
        else:
             await sendWebhookMessage(ctx,borno,getRandomMessage(bMessage))
-    elif ctx.content.startswith('alek'):
+    elif messageContent.startswith('alek'):
         await alekMsg(ctx)
     await bot.process_commands(ctx)
 
