@@ -38,7 +38,8 @@ def createSession():
     engine = create_engine('sqlite:///messages.db',echo=False)
     sessioon = sessionmaker(bind=engine)
     return sessioon()
-def getRandomMessage(obj,session):
+def getRandomMessage(obj):
+    session = createSession()
     message = session.query(obj).order_by(func.random()).first()
     session.close()
     return message

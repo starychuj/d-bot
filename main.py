@@ -45,16 +45,24 @@ async def on_ready():
 async def on_message(ctx):
     ctx.content = ctx.content.lower()
     if ctx.content.startswith('kamil'):
-        await sendWebhookMessage(ctx,spike,getRandomMessage(sMessage,createSession()))
+        await sendWebhookMessage(ctx,spike,getRandomMessage(sMessage))
     elif ctx.content.startswith('adam'):
-       await sendWebhookMessage(ctx,icebox,getRandomMessage(aMessage,createSession()))
+       await sendWebhookMessage(ctx,icebox,getRandomMessage(aMessage))
     elif ctx.content.startswith('zawo'):
-       await sendWebhookMessage(ctx,zawo,getRandomMessage(zMessage,createSession()))
+       await sendWebhookMessage(ctx,zawo,getRandomMessage(zMessage))
     elif ctx.content.startswith('tocha'):
-       await sendWebhookMessage(ctx,tocha,getRandomMessage(tMessage,createSession()))
+       await sendWebhookMessage(ctx,tocha,getRandomMessage(tMessage))
     elif ctx.content.startswith('borno'):
-       await sendWebhookMessage(ctx,borno,getRandomMessage(bMessage,createSession()))
+       if "powiedz" in ctx.content:
+            msg = ctx.content.replace('borno ','')
+            msg = msg.replace('powiedz ','')
+            msg = msg.replace('powiedzborno ','')
+            await sendWebhookMessage(ctx,borno,msg)
+       else:
+            await sendWebhookMessage(ctx,borno,getRandomMessage(bMessage))
     elif ctx.content.startswith('alek'):
         await alekMsg(ctx)
     await bot.process_commands(ctx)
+
+
 bot.run(token)

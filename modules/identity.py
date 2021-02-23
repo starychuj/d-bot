@@ -1,4 +1,3 @@
-# identity - tuple (name,photo_url)
 spike = {
     "name":"bingomom",
     "photo_url":"https://cdn.discordapp.com/avatars/808635330471264296/cf6dece2ae4c30affd3f3cc6ced5ce5d.webp?size=256"
