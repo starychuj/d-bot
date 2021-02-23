@@ -18,7 +18,7 @@ async def sendWebhookMessage(ctx,identity,message):
             selectedWebhook = await ctx.channel.create_webhook(name=webhookName)
         await selectedWebhook.send(message,username=identity["name"],avatar_url=identity["photo_url"])
 def replaceAll(msg):
-    toReplace = ["borno ","powiedz ","powiedzborno","bornopowiedz","BORNO ","POWIEDZ ","BORNOPOWIEDZ","POWIEDZBORNO","borno"]
+    toReplace = ["borno ","powiedz ","powiedzborno","bornopowiedz","borno"]
     for w in toReplace:
         msg = msg.replace(w,"")
     return msg
@@ -58,8 +58,8 @@ async def on_message(ctx):
     elif messageContent.startswith('tocha'):
        await sendWebhookMessage(ctx,tocha,getRandomMessage(tMessage))
     elif messageContent.startswith('borno'):
-       if "powiedz" or "POWIEDZ" in ctx.content:
-            msg = replaceAll(ctx.content)
+       if "powiedz" in messageContent:
+            msg = replaceAll(messageContent)
             if msg == "":
                 msg = "nie"
             await sendWebhookMessage(ctx,borno,msg)
