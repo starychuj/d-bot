@@ -3,6 +3,7 @@ from modules.identity import *
 from modules.messages import *
 import os
 import discord
+import regex
 from discord.ext import commands
 webhookName = "icebox246"
 bot = commands.Bot(command_prefix='$')
@@ -18,10 +19,11 @@ async def sendWebhookMessage(ctx,identity,message):
             selectedWebhook = await ctx.channel.create_webhook(name=webhookName)
         await selectedWebhook.send(message,username=identity["name"],avatar_url=identity["photo_url"])
 def replaceAll(msg):
-    toReplace = ["borno ","powiedz ","powiedzborno","bornopowiedz","borno"]
-    for w in toReplace:
-        msg = msg.replace(w,"")
-    return msg
+    while "borno" in msg:
+        msg = msg.replace("borno","")
+    while "powiedz" in msg:
+        msg = msg.replace("powiedz","")
+    return (msg if msg != [] and msg.split() != [] else "nie")
 async def alekMsg(ctx):
     await sendWebhookMessage(ctx,zawo,alek1)
     await sendWebhookMessage(ctx,zawo,alek2)
@@ -59,10 +61,7 @@ async def on_message(ctx):
        await sendWebhookMessage(ctx,tocha,getRandomMessage(tMessage))
     elif messageContent.startswith('borno'):
        if "powiedz" in messageContent:
-            msg = replaceAll(messageContent)
-            if msg == "":
-                msg = "nie"
-            await sendWebhookMessage(ctx,borno,msg)
+            await sendWebhookMessage(ctx,borno,replaceAll(messageContent))
        else:
             await sendWebhookMessage(ctx,borno,getRandomMessage(bMessage))
     elif messageContent.startswith('alek'):
