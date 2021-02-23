@@ -58,7 +58,7 @@ async def on_message(ctx):
     elif messageContent.startswith('tocha'):
        await sendWebhookMessage(ctx,tocha,getRandomMessage(tMessage))
     elif messageContent.startswith('borno'):
-       if "powiedz" in ctx.content:
+       if "powiedz" or "POWIEDZ" in ctx.content:
             msg = replaceAll(ctx.content)
             if msg == "":
                 msg = "nie"
