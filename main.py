@@ -18,7 +18,7 @@ async def sendWebhookMessage(ctx,identity,message):
             selectedWebhook = await ctx.channel.create_webhook(name=webhookName)
         await selectedWebhook.send(message,username=identity["name"],avatar_url=identity["photo_url"])
 def replaceAll(msg):
-    toReplace = ["borno ","powiedz ","powiedzborno","bornopowiedz","BORNO ","POWIEDZ ","BORNOPOWIEDZ","POWIEDZBORNO"]
+    toReplace = ["borno ","powiedz ","powiedzborno","bornopowiedz","BORNO ","POWIEDZ ","BORNOPOWIEDZ","POWIEDZBORNO","borno"]
     for w in toReplace:
         msg = msg.replace(w,"")
     return msg
