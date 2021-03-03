@@ -47,7 +47,7 @@ async def squareCount(messageContent):
             if 2*a/divide_2 ==1:
                 ans_x2 = x2//divide_2
             else:
-                ans_x2 = f"{x2//divide_1}/{2*a//divide_2}"
+                ans_x2 = f"{x2//divide_2}/{2*a//divide_2}"
             return f"Delta: {delta}\nPierwiastek delty: {sqr} \nDwa rozwiązania:\nx1= {ans_x1} \nx2= {ans_x2}\n{squarehead}"
         else:
             ans_delta = delta
