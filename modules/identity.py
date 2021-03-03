@@ -26,3 +26,7 @@ borno = {
     "name":"Tshock",
     "photo_url":"https://cdn.discordapp.com/attachments/774178902901522453/811552399739060245/unknown.png"
 }
+squarebot = {
+    "name":"Squarebot",
+    "photo_url":"https://media.discordapp.net/attachments/774178902901522453/816626175614255114/Screenshot_19.png"
+}

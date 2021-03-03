@@ -1,6 +1,7 @@
 from modules.database import *
 from modules.identity import *
 from modules.messages import *
+from modules.functions import *
 import os
 import discord
 from discord.ext import commands
@@ -17,15 +18,11 @@ async def sendWebhookMessage(ctx,identity,message):
         if selectedWebhook == None:
             selectedWebhook = await ctx.channel.create_webhook(name=webhookName)
         await selectedWebhook.send(message,username=identity["name"],avatar_url=identity["photo_url"])
-def replaceAll(msg):
-    while "borno" in msg:
-        msg = msg.replace("borno","")
-    while "powiedz" in msg:
-        msg = msg.replace("powiedz","")
-    return (msg if msg != [] and msg.split() != [] else "nie")
+
 async def alekMsg(ctx):
     await sendWebhookMessage(ctx,zawo,alek1)
     await sendWebhookMessage(ctx,zawo,alek2)
+
 @bot.command()
 async def dzierg(ctx):
     await sendWebhookMessage(ctx,dziergID,dziergText)
@@ -44,12 +41,14 @@ async def mouson(ctx):
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(activity=discord.Game(name="Roblox"))
+    await bot.change_presence(activity=discord.))
     print("Connected to discord")
 
 @bot.event
 async def on_message(ctx):
     messageContent = ctx.content.lower()
+    if messageContent.startswith('square'):
+        await sendWebhookMessage(ctx,squarebot, await squareCount(messageContent))
     if messageContent.startswith('kamil'):
         await sendWebhookMessage(ctx,spike,getRandomMessage(sMessage))
     elif messageContent.startswith('adam'):
@@ -60,7 +59,7 @@ async def on_message(ctx):
        await sendWebhookMessage(ctx,tocha,getRandomMessage(tMessage))
     elif messageContent.startswith('borno'):
        if "powiedz" in messageContent:
-            await sendWebhookMessage(ctx,borno,replaceAll(messageContent))
+            await sendWebhookMessage(ctx,borno,replaceAllBorno(messageContent))
        else:
             await sendWebhookMessage(ctx,borno,getRandomMessage(bMessage))
     elif messageContent.startswith('alek'):
