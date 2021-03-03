@@ -41,7 +41,7 @@ async def mouson(ctx):
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(activity=discord.))
+    await bot.change_presence(activity=discord.Game(name="Roblox"))
     print("Connected to discord")
 
 @bot.event
