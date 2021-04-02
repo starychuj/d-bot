@@ -1,0 +1,41 @@
+from math import sqrt,gcd,pow
+__all__ = ["squareCount","replaceAllBorno"]
+async def squareCount(messageContent):
+    squarehead = "pozdro squarehead <:squareheadirl:717345147011989534>"
+    squareError = "spierdalaj kolasty"
+    square = messageContent.replace('square ','')
+    args = square.split(' ')
+    while args[0] == '':
+        args.remove(args[0])
+    if len(args) != 3:
+        return squareError
+    squareMax = max(len(args[0]),len(args[1]))
+    squareMax = max(squareMax,len(args[2]))
+    if squareMax > 10:
+        return squareError
+    try:
+        a = int(args[0])*1
+        b = int(args[1])*1
+        c = int(args[2])*1
+    except ValueError:
+        return squareError
+    delta = b*b-4*a*c
+    sqrtDelta = int(sqrt(delta))
+    response = f"Delta:{delta}\nPierwiastek z delty:{sqrtDelta}\n"
+    if delta > 0:
+        x1 = (-b - sqrt(delta))/(2*a)
+        x2 = (-b + sqrt(delta))/(2*a)
+        response += f"x1:{x1}\nx2:{x2}\n"
+    elif delta == 0:
+        x0 = (-b)/(2*a)
+        response += f"Jedno rozwiązanie:{x0}\n"
+    else:
+        response += "Brak rozwiązań\n"
+    response += f"{squarehead}"
+    return response
+def replaceAllBorno(msg):
+    while "borno" in msg:
+        msg = msg.replace("borno","")
+    while "powiedz" in msg:
+        msg = msg.replace("powiedz","")
+    return (msg if msg != [] and msg.split() != [] else "nie")

@@ -16,7 +16,7 @@ mousonID = {
 }
 zawo = {
     "name":"zawodev",
-    "photo_url":"https://cdn.discordapp.com/avatars/336921078138011650/6bac60336e9569abe2e648c3194cf1d1.png?size=256"
+    "photo_url":"https://media.discordapp.net/attachments/774178902901522453/827629136289857606/unknown.png"
 }
 tocha = {
     "name":"nicnicjajo",
