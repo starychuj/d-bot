@@ -32,6 +32,10 @@ async def dzierg2(ctx):
     await sendWebhookMessage(ctx,dziergID,dziergText2)
 
 @bot.command()
+async def horny(ctx):
+    await sendWebhookMessage(ctx,icebox,adamR)
+
+@bot.command()
 async def text(ctx):
     await sendWebhookMessage(ctx,icebox,filmText)
 
